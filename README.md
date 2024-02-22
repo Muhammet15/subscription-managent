@@ -5,7 +5,7 @@ php artisan migrate
 php artisan db:seed
 php artisan serve
 
-php artisan shecdule:work -> worker ve raporlama
+php artisan schedule:work -> worker ve raporlama
 
 
 

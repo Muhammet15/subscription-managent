@@ -1,0 +1,1146 @@
+{
+	"info": {
+		"_postman_id": "0cf1b0cc-12d0-4d99-8c7e-41dc26f87732",
+		"name": "Sub manangment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18532741",
+		"_collection_link": "https://lunar-eclipse-437040.postman.co/workspace/My-Workspace~0f440428-f4c3-4224-800a-53af0e0a8328/collection/18532741-0cf1b0cc-12d0-4d99-8c7e-41dc26f87732?action=share&source=collection_link&creator=18532741"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uid",
+									"value": "123322",
+									"description": "string",
+									"type": "text"
+								},
+								{
+									"key": "appId",
+									"value": "1",
+									"description": "integer",
+									"type": "text"
+								},
+								{
+									"key": "language",
+									"value": "tr",
+									"description": "string",
+									"type": "text"
+								},
+								{
+									"key": "os",
+									"value": "ios",
+									"description": "string",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{base_url}}/register"
+					},
+					"response": [
+						{
+							"name": "Register TRUE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "uid",
+											"value": "154252232",
+											"description": "string",
+											"type": "text"
+										},
+										{
+											"key": "appId",
+											"value": "1",
+											"description": "integer",
+											"type": "text"
+										},
+										{
+											"key": "language",
+											"value": "tr",
+											"description": "string",
+											"type": "text"
+										},
+										{
+											"key": "os",
+											"value": "android",
+											"description": "string",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/register"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 08:47:52 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 08:47:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"First Register Device OK\",\n    \"data\": {\n        \"device\": {\n            \"id\": 1,\n            \"uid\": \"154252232\",\n            \"appId\": \"1\",\n            \"language\": \"tr\",\n            \"os\": \"android\"\n        },\n        \"client_token\": \"1|N8TmxTRTKQEe2n4DyYGaCDYI8bUvmyPPXAHbyTWx9276a765\"\n    }\n}"
+						},
+						{
+							"name": "Validation Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "uid",
+											"value": "",
+											"description": "string",
+											"type": "text"
+										},
+										{
+											"key": "appId",
+											"value": "gfdfg",
+											"description": "integer",
+											"type": "text"
+										},
+										{
+											"key": "language",
+											"value": "tr",
+											"description": "string",
+											"type": "text"
+										},
+										{
+											"key": "os",
+											"value": "android",
+											"description": "string",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{base_url}}/register"
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 08:48:20 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 08:48:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"uid\": [\n            \"UID is required!\"\n        ],\n        \"appId\": [\n            \"The app id field must be a number.\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Purchase",
+			"item": [
+				{
+					"name": "Purchase Verify",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "9|pul7Y3orAOXH6kTg1x5GkFHRRJua52PU2pmw8myWab138ee7"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "app_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/purchase?receipt=6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"purchase"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+									"description": "sonu 0 olan receipt örnek",
+									"disabled": true
+								},
+								{
+									"key": "receipt",
+									"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "app_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/purchase?receipt=6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"purchase"
+									],
+									"query": [
+										{
+											"key": "receipt",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6920",
+											"description": "1 = OK , 0 FALSE"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:18:26 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:18:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Purchase processed successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"device_id\": 1,\n        \"app_id\": \"2\",\n        \"status\": \"started\",\n        \"expire_date\": \"2024-02-21 17:18:26\",\n        \"receipt\": \"6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921\"\n    }\n}"
+						},
+						{
+							"name": "FALSE",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "app_id",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/purchase?receipt=6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6926",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"purchase"
+									],
+									"query": [
+										{
+											"key": "receipt",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6926",
+											"description": "1 = OK , 0 FALSE"
+										}
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:19:02 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:19:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 500,\n    \"message\": \"Purchase Transactions Failed!\",\n    \"data\": {}\n}"
+						},
+						{
+							"name": "Validate Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "app_id",
+											"value": "555",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/purchase?receipt=6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"purchase"
+									],
+									"query": [
+										{
+											"key": "receipt",
+											"value": "6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921",
+											"description": "1 = OK , 0 FALSE"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Content",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:51:17 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:51:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "55"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 422,\n    \"message\": \"Validation Error\",\n    \"data\": {\n        \"app_id\": [\n            \"The selected app id is invalid.\"\n        ]\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "App id Get Plan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "7|bURWwhqysYZrZrYCbOQ2bFOJH4NE7pnp2QMVXTYR6ba670ad"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/subscriptions/"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/subscriptions/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:48:22 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:48:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Subscription found\",\n    \"data\": {\n        \"id\": 2,\n        \"device\": {\n            \"device_id\": 1,\n            \"uid\": \"2312311\",\n            \"language\": \"tr\",\n            \"os\": \"ios\"\n        },\n        \"app\": {\n            \"app_id\": 1,\n            \"name\": \"Instagram\",\n            \"endpoint\": \"https://api-instagram.com/\"\n        },\n        \"status\": \"renewed\",\n        \"expire_date\": \"2024-02-21 17:22:29\",\n        \"receipt\": \"6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921\"\n    }\n}"
+						},
+						{
+							"name": "FALSE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/subscriptions/yuoıyuoıyuoı"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:52:18 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:52:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "56"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 404,\n    \"message\": \"Subscription not found\",\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "My All Subscriptions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "7|bURWwhqysYZrZrYCbOQ2bFOJH4NE7pnp2QMVXTYR6ba670ad"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/subscriptions"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/subscriptions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:22:36 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:22:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "54"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Subscriptions found\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"device_id\": 1,\n            \"app_id\": 2,\n            \"status\": \"started\",\n            \"expire_date\": \"2024-02-21 17:18:26\",\n            \"receipt\": \"6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921\"\n        },\n        {\n            \"id\": 2,\n            \"device_id\": 1,\n            \"app_id\": 1,\n            \"status\": \"renewed\",\n            \"expire_date\": \"2024-02-21 17:22:29\",\n            \"receipt\": \"6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Empty",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/subscriptions"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:23:15 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:23:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"You have not subscribed to any yet.\",\n    \"data\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Plan Detail",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "7|bURWwhqysYZrZrYCbOQ2bFOJH4NE7pnp2QMVXTYR6ba670ad"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}/subscriptions/1/detail"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/subscriptions/1/detail"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:43:21 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:43:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Subscription found\",\n    \"data\": {\n        \"id\": 1,\n        \"device\": {\n            \"device_id\": 1,\n            \"uid\": \"2312311\",\n            \"language\": \"tr\",\n            \"os\": \"ios\"\n        },\n        \"app\": {\n            \"app_id\": 2,\n            \"name\": \"Facebook\",\n            \"endpoint\": \"https://api-facebook.com/\"\n        },\n        \"status\": \"started\",\n        \"expire_date\": \"2024-02-21 17:18:26\",\n        \"receipt\": \"6146ccf6a66d994f7c363db875e31ca35581450a4bf6d3be6cc9ac79233a6921\"\n    }\n}"
+						},
+						{
+							"name": "FALSE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": "{{base_url}}/subscriptions/123131/detail"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:44:01 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 17:44:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 404,\n    \"message\": \"Subscription not found\",\n    \"data\": {}\n}"
+						}
+					]
+				},
+				{
+					"name": "Cancel Plan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "1|zlxldyr59O3u4sLE3P0nSv0Ljp74UaOahAfHwFIzddfd3cd5"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/subscriptions/1/cancel"
+					},
+					"response": [
+						{
+							"name": "TRUE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscriptions/1/cancel"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:58:45 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:58:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"code\": 200,\n    \"message\": \"Subscription cancelled\",\n    \"data\": {}\n}"
+						},
+						{
+							"name": "FALSE",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscriptions/13324/cancel"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:58:56 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 21 Feb 2024 20:58:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.20"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"code\": 404,\n    \"message\": \"Subscription not found\",\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		}
+	]
+}
